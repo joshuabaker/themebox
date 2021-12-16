@@ -1,8 +1,8 @@
 {
-  "name": "theme-kit",
+  "name": "themebox",
   "version": "0.1.0",
   "main": "src/index.js",
-  "repository": "git@github.com:joshuabaker/theme-kit.git",
+  "repository": "git@github.com:joshuabaker/themebox.git",
   "author": "Joshua Baker <160484+joshuabaker@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
