@@ -1,6 +1,6 @@
 {
   "name": "theme-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/index.js",
   "repository": "git@github.com:joshuabaker/theme-kit.git",
   "author": "Joshua Baker <160484+joshuabaker@users.noreply.github.com>",
