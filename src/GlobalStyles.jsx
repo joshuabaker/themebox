@@ -1,4 +1,4 @@
-import CSSReset from "@chakra-ui/css-reset/src/css-reset";
+import CSSReset from "@chakra-ui/css-reset";
 import { Global, useTheme } from "@emotion/react";
 import "focus-visible/dist/focus-visible";
 
