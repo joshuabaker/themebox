@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import { Box } from "./Box";
+import { useThemeComponent } from "./useThemeComponent";
 import { mapResponsive } from "./utils";
 
 export const AspectRatio = forwardRef(function AspectRatio(

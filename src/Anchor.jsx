@@ -3,20 +3,22 @@ import { Box } from "./Box";
 import { useThemeComponent } from "./useThemeComponent";
 
 export const Anchor = forwardRef(function Anchor(
-  { variant, sx, ...props },
+  { rel, sx, target, ...props },
   ref
 ) {
-  const { baseStyles, variants } = useThemeComponent("Anchor");
+  const { base, modifierStyles } = useThemeComponent("Anchor", props);
 
-  if (!props?.rel && props?.target === "_blank") {
-    props.rel = "noopener noreferrer";
+  if (!rel && target === "_blank") {
+    rel = "noopener noreferrer";
   }
 
   return (
     <Box
       ref={ref}
       as={"a"}
-      sx={{ ...baseStyles, ...variants?.[variant], ...sx }}
+      rel={rel}
+      sx={{ ...base, ...modifierStyles, ...sx }}
+      target={target}
       {...props}
     />
   );

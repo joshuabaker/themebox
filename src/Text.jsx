@@ -2,14 +2,9 @@ import { forwardRef } from "react";
 import { useThemeComponent } from "./useThemeComponent";
 import { Box } from "./Box";
 
-export const Text = forwardRef(function Text({ sx, variant, ...props }, ref) {
-  const { baseStyles, variants } = useThemeComponent("Text");
-
+export const Text = forwardRef(function Text({ sx, ...props }, ref) {
+  const { base, modifierStyles } = useThemeComponent("Text", props);
   return (
-    <Box
-      ref={ref}
-      sx={{ ...baseStyles, ...variants?.[variant], ...sx }}
-      {...props}
-    />
+    <Box ref={ref} sx={{ ...base, ...modifierStyles, ...sx }} {...props} />
   );
 });

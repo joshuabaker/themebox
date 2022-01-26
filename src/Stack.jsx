@@ -1,26 +1,26 @@
-import { useTheme } from "@emotion/react";
 import { forwardRef } from "react";
 import { Flex } from "./Flex";
-import { mapResponsive } from "./utils";
+import { useThemeComponent } from "./useThemeComponent";
 
 export const Stack = forwardRef(function Stack(
-  { gap, columnGap = gap, rowGap = gap, sx, ...props },
+  { spacing, spacingX = spacing, spacingY = spacing, sx, ...props },
   ref
 ) {
-  const { gaps } = useTheme();
-
+  const { base, modifierStyles } = useThemeComponent("Stack", props);
   return (
     <Flex
       ref={ref}
       sx={{
-        "--column-gap": mapResponsive(columnGap, (gap) => gaps?.[gap]),
-        "--row-gap": mapResponsive(rowGap, (gap) => gaps?.[gap]),
-        mx: "calc(var(--column-gap) * -1)",
-        my: "calc(var(--row-gap) * -1)",
+        "--spacing-x": spacingX,
+        "--spacing-y": spacingY,
+        mx: "calc(var(--spacing-x) * -1)",
+        my: "calc(var(--spacing-y) * -1)",
         "& > *:not(style)": {
-          mx: "var(--column-gap)",
-          my: "var(--row-gap) ",
+          mx: "var(--spacing-x)",
+          my: "var(--spacing-y) ",
         },
+        ...base,
+        ...modifierStyles,
         ...sx,
       }}
       {...props}

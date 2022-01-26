@@ -1,21 +1,18 @@
 import { useMemo } from "react";
 import { useTheme } from "./useTheme";
 
-export function useModifiers(component, props) {
+export function useThemeComponent(component, props) {
   const theme = useTheme();
 
   const config = theme?.components?.[component] ?? {};
-  const { baseStyles, variants, defaultVariants } = config;
+  const { base, modifiers, defaultModifiers } = config;
 
   const modifierStyles = useMemo(() => {
-    const selectedVariants = { ...defaultVariants, ...props };
-    return Object.entries(selectedVariants).reduce((styles, [key, value]) => {
-      return { ...styles, ...variants?.[key]?.[value] };
+    const selectedModifiers = { ...defaultModifiers, ...props };
+    return Object.entries(selectedModifiers).reduce((styles, [key, value]) => {
+      return { ...styles, ...modifiers?.[key]?.[value] };
     }, {});
-  }, [defaultVariants, props, variants]);
+  }, [defaultModifiers, props, modifiers]);
 
-  return {
-    baseStyles,
-    modifierStyles,
-  };
+  return { base, modifierStyles };
 }

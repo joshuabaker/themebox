@@ -2,14 +2,14 @@ function pseudoGroup(...selectors) {
   return selectors.map((selector) => `[role=group]${selector}`).join(", ");
 }
 
-export const pseudoKeys = {
+// prettier-ignore
+export const pseudos = {
   _active: "&:active, &[data-active]",
   _activeLink: "&[aria-current=page]",
   _after: "&::after",
   _autofill: "&:-webkit-autofill",
   _before: "&::before",
   _checked: "&[aria-checked=true], &[data-checked]",
-  _dark: "[data-theme=dark] &, &[data-theme=dark]",
   _disabled: "&[disabled], &[aria-disabled=true], &[data-disabled]",
   _empty: "&:empty",
   _even: "&:nth-of-type(even)",
@@ -29,11 +29,9 @@ export const pseudoKeys = {
   _hidden: "&[hidden], &[data-hidden]",
   _highlighted: "&[data-highlighted]",
   _hover: "&:hover, &[data-hover]",
-  _indeterminate:
-    "&:indeterminate, &[aria-checked=mixed], &[data-indeterminate]",
+  _indeterminate: "&:indeterminate, &[aria-checked=mixed], &[data-indeterminate]",
   _invalid: "&[aria-invalid=true], &[data-invalid]",
   _last: "&:last-of-type",
-  _light: "[data-theme=light] &, &[data-theme=light]",
   _loading: "&[data-loading], &[aria-busy=true]",
   _mediaDark: "@media (prefers-color-scheme: dark)",
   _notFirst: "&:not(:first-of-type)",

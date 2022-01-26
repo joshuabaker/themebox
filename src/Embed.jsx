@@ -3,7 +3,7 @@ import { Box } from "./Box";
 import { mapResponsive } from "./utils";
 
 export const Embed = forwardRef(function Embed(
-  { ratio: containerRatio = embedRatio, embedHtml, embedRatio, sx, ...props },
+  { embedHtml, embedRatio, ratio: containerRatio = embedRatio, sx, ...props },
   ref
 ) {
   if (!embedHtml) throw new Error("Missing required prop: embedHtml");
