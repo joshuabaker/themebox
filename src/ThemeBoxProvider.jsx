@@ -5,7 +5,7 @@ import { css } from "./utils";
 
 export function ThemeBoxProvider({ theme, resetCss = true, children }) {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={{ space: undefined, fontSizes: undefined, ...theme }}>
       {resetCss && <CSSReset />}
       <Global styles={(theme) => theme.globalStyle && css(theme.globalStyle)} />
       {children}
