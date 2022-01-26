@@ -4,10 +4,8 @@ import { GlobalStyles } from "./GlobalStyles";
 export function ThemeProvider({ theme, children }) {
   return (
     <EmotionThemeProvider theme={theme}>
-      <div>
-        <GlobalStyles />
-        {children}
-      </div>
+      <GlobalStyles />
+      {children}
     </EmotionThemeProvider>
   );
 }

@@ -1,6 +1,6 @@
 {
   "name": "themebox",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "main": "src/index.js",
   "repository": "git@github.com:joshuabaker/themebox.git",
   "author": "Joshua Baker <160484+joshuabaker@users.noreply.github.com>",
@@ -8,7 +8,6 @@
   "dependencies": {
     "@chakra-ui/css-reset": "^1.1.1",
     "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
     "@theme-ui/css": "^0.13.1",
     "focus-visible": "^5.2.0"
   },
