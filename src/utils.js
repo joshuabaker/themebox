@@ -25,7 +25,7 @@ export function mapResponsive(prop, mapper) {
       if (value === null) {
         return null;
       }
-      return mapper(prop);
+      return mapper(value);
     });
   }
 
