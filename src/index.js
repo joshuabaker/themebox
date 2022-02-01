@@ -1,4 +1,6 @@
 export { Anchor } from "./Anchor";
+export { AnchorBox } from "./AnchorBox";
+export { AnchorOverlay } from "./AnchorOverlay";
 export { AspectRatio } from "./AspectRatio";
 export { Box } from "./Box";
 export { Button } from "./Button";
