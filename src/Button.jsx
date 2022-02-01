@@ -8,7 +8,7 @@ export const Button = forwardRef(function Button({ sx, ...props }, ref) {
     <Box
       ref={ref}
       as={props?.href ? "a" : "button"}
-      sx={{ ...base, ...modifierStyles, ...sx }}
+      sx={{ textAlign: "center", ...base, ...modifierStyles, ...sx }}
       {...props}
     />
   );
