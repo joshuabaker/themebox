@@ -1,5 +1,5 @@
-import { Box } from "./Box";
 import { forwardRef } from "react";
+import { Box } from "./Box";
 
 export const VisuallyHidden = forwardRef(function VisuallyHidden(
   { sx, ...props },

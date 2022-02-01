@@ -1,5 +1,5 @@
-import { pseudos } from "./pseudos";
 import { css as transformStyleObject } from "@theme-ui/css";
+import { pseudos } from "./pseudos";
 
 export const css = (styles) => (theme) => {
   return transformStyleObject(styles)(theme);

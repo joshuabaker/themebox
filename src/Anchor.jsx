@@ -1,6 +1,5 @@
 import { forwardRef } from "react";
 import { BaseAnchor } from "./BaseAnchor";
-import { Box } from "./Box";
 import { useThemeComponent } from "./useThemeComponent";
 
 export const Anchor = forwardRef(function Anchor({ sx, ...props }, ref) {
