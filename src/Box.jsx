@@ -1,7 +1,3 @@
-import styled from "@emotion/styled";
-import { css } from "./utils";
+import { styled } from "./styled";
 
-export const Box = styled("div")(
-  ({ sx, theme }) => css(sx)(theme),
-  ({ css }) => css
-);
+export const Box = styled("div")();

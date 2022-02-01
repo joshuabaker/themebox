@@ -10,6 +10,7 @@ export { Embed } from "./Embed";
 export { Flex } from "./Flex";
 export { Grid } from "./Grid";
 export { Stack } from "./Stack";
+export { styled } from "./styled";
 export { Text } from "./Text";
 export { ThemeBoxProvider } from "./ThemeBoxProvider";
 export { useTheme } from "./useTheme";
