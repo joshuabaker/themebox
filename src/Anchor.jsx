@@ -1,24 +1,14 @@
 import { forwardRef } from "react";
+import { BaseAnchor } from "./BaseAnchor";
 import { Box } from "./Box";
 import { useThemeComponent } from "./useThemeComponent";
 
-export const Anchor = forwardRef(function Anchor(
-  { rel, sx, target, ...props },
-  ref
-) {
+export const Anchor = forwardRef(function Anchor({ sx, ...props }, ref) {
   const { base, modifierStyles } = useThemeComponent("Anchor", props);
-
-  if (!rel && target === "_blank") {
-    rel = "noopener noreferrer";
-  }
-
   return (
-    <Box
+    <BaseAnchor
       ref={ref}
-      as={"a"}
-      rel={rel}
       sx={{ ...base, ...modifierStyles, ...sx }}
-      target={target}
       {...props}
     />
   );
