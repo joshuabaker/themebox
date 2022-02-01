@@ -21,6 +21,7 @@ export const Stack = forwardRef(function Stack(
           mx: "var(--spacing-x)",
           my: "var(--spacing-y) ",
         },
+        flexWrap: "wrap",
         ...base,
         ...modifierStyles,
         ...sx,
