@@ -8,6 +8,7 @@ export { Container } from "./Container";
 export { css } from "./utils";
 export { Embed } from "./Embed";
 export { Flex } from "./Flex";
+export { Graphic } from "./Graphic";
 export { Grid } from "./Grid";
 export { Stack } from "./Stack";
 export { styled } from "./styled";
