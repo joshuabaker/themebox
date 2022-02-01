@@ -7,6 +7,7 @@ export const AspectRatio = forwardRef(function AspectRatio(
   { ratio, sx, ...props },
   ref
 ) {
+  const { base, modifierStyles } = useThemeComponent("AspectRatio", props);
   return (
     <Box
       ref={ref}
@@ -29,6 +30,8 @@ export const AspectRatio = forwardRef(function AspectRatio(
         "& > img, & > video": {
           objectFit: "cover",
         },
+        ...base,
+        ...modifierStyles,
         ...sx,
       }}
       {...props}
